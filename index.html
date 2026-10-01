@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casa Juanito Nador · Restaurante español de pescado y marisco</title>
+<meta name="description" content="Casa Juanito Nador, restaurante español de pescado y marisco: coquinas, cigalas, langostinos, pescaíto frito, pulpo y paellas. Platos adaptados sin gluten. Todos los días de 12:00 a 00:00. 05 36 38 05 00.">
+<meta name="theme-color" content="#0b4a73">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23062a45'/%3E%3Cg fill='none' stroke='%23f2f7fa' stroke-width='3'%3E%3Ccircle cx='32' cy='32' r='14'/%3E%3Cpath d='M32 6v52M6 32h52M14 14l36 36M50 14L14 50'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@300..700&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="ping" id="ping" aria-hidden="true">
+  <span class="ping__ring"></span><span class="ping__ring"></span><span class="ping__ring"></span>
+  <p class="ping__name">Casa Juanito</p>
+</div>
+
+<canvas class="snow" id="snow" aria-hidden="true"></canvas>
+<div class="rays" aria-hidden="true"></div>
+
+<aside class="gauge" aria-hidden="true">
+  <span class="gauge__lbl" data-i18n="gauge">Profundidad</span>
+  <span class="gauge__track"><span class="gauge__mark" id="gaugeMark"></span></span>
+  <span class="gauge__val" id="gaugeVal">0 m</span>
+</aside>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top">
+    <svg class="wheel" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3"><circle cx="32" cy="32" r="15"/><circle cx="32" cy="32" r="4"/><path d="M32 4v56M4 32h56M12 12l40 40M52 12L12 52"/></g></svg>
+    <span>Casa Juanito</span>
+  </a>
+  <nav class="nav__links" aria-label="Principal">
+    <a href="#bajar" data-i18n="nav.menu">La carta</a>
+    <a href="#sonar" data-i18n="nav.sonar">Sonar</a>
+    <a href="#arroces" data-i18n="nav.rice">Arroces</a>
+    <a href="#visita" data-i18n="nav.visit">Visítanos</a>
+  </nav>
+  <div class="lang" role="group" aria-label="Idioma">
+    <button type="button" data-lang="es" aria-pressed="true">ES</button>
+    <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" data-depth="0">
+    <div class="hero__copy">
+      <h1 class="hero__title">Casa<br><i>Juanito</i></h1>
+      <p class="hero__sub" data-i18n="hero.sub">Pescado y marisco a la española, al final de la playa de Nador. Producto fresco, bien cocinado y bien presentado.</p>
+      <div class="hero__cta">
+        <a class="btn btn--coral" href="#bajar" data-i18n="cta.dive">Bajar a la carta</a>
+        <a class="btn btn--line" href="tel:+212536380500"><i class="ph ph-phone"></i>05 36 38 05 00</a>
+      </div>
+    </div>
+    <figure class="hero__fig"><img src="assets/img/mariscada.jpg" alt="Mariscada con bogavante, gambas rojas y langostinos" width="1200" height="1600"></figure>
+    <div class="hero__surface" aria-hidden="true"></div>
+  </section>
+
+  <section class="zone" id="bajar" data-depth="20">
+    <p class="zone__depth"><span>5 m</span></p>
+    <div class="zone__head">
+      <h2 class="h2" data-i18n="z1.t">Cerca de la superficie</h2>
+      <p class="lead" data-i18n="z1.l">Pescaíto frito como en el sur de España: boquerones, chanquetes, calamares y puntillitas.</p>
+    </div>
+    <div class="cards cards--a">
+      <figure class="card"><img src="assets/img/boquerones.jpg" alt="Boquerones fritos con limón" loading="lazy" width="900" height="1600"><figcaption data-i18n="d.boq">Boquerones fritos</figcaption></figure>
+      <figure class="card card--wide"><img src="assets/img/fritura.jpg" alt="Fritura variada: calamares, boquerones, lenguado y gambas" loading="lazy" width="1079" height="1368"><figcaption data-i18n="d.fri">Fritura variada</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="zone zone--r" data-depth="60">
+    <p class="zone__depth"><span>20 m</span></p>
+    <div class="zone__head">
+      <h2 class="h2" data-i18n="z2.t">En la arena</h2>
+      <p class="lead" data-i18n="z2.l">Coquinas y almejas, ostras y conchas finas. Lo que más se repite en las opiniones.</p>
+    </div>
+    <div class="cards cards--b">
+      <figure class="card card--wide"><img src="assets/img/coquinas.jpg" alt="Fuente de coquinas con limón" loading="lazy" width="1600" height="1205"><figcaption data-i18n="d.coq">Coquinas</figcaption></figure>
+      <figure class="card"><img src="assets/img/ostras-cigalas.jpg" alt="Ostras y cigalas sobre hielo" loading="lazy" width="720" height="1280"><figcaption data-i18n="d.ost">Ostras</figcaption></figure>
+    </div>
+    <blockquote class="zone__q"><p>«Lo mejor, las coquinas y el langostino típico de allí.»</p><cite>Jose A., Google</cite></blockquote>
+  </section>
+
+  <section class="zone" data-depth="110">
+    <p class="zone__depth"><span>60 m</span></p>
+    <div class="zone__head">
+      <h2 class="h2" data-i18n="z3.t">Entre las rocas</h2>
+      <p class="lead" data-i18n="z3.l">Pulpo, dorada, lenguado, rape. El pescado del día, a la plancha o frito.</p>
+    </div>
+    <div class="cards cards--a">
+      <figure class="card"><img src="assets/img/pulpo.jpg" alt="Pulpo a la plancha con limón" loading="lazy" width="1200" height="1600"><figcaption data-i18n="d.pul">Pulpo</figcaption></figure>
+      <figure class="card card--wide"><img src="assets/img/pescado.jpg" alt="Filetes de pescado con patatas y ajo" loading="lazy" width="1600" height="1200"><figcaption data-i18n="d.pes">Pescado del día</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="zone zone--r" data-depth="170">
+    <p class="zone__depth"><span>200 m</span></p>
+    <div class="zone__head">
+      <h2 class="h2" data-i18n="z4.t">En el fondo</h2>
+      <p class="lead" data-i18n="z4.l">Cigalas, langostinos y gambas rojas, cocidos en su punto o a la plancha.</p>
+    </div>
+    <div class="cards cards--b">
+      <figure class="card card--wide"><img src="assets/img/langostinos.jpg" alt="Fuente de langostinos cocidos con limón" loading="lazy" width="1600" height="1201"><figcaption data-i18n="d.lan">Langostinos y cigalas</figcaption></figure>
+      <figure class="card"><img src="assets/img/gambas-rojas.jpg" alt="Gambas y cigalas a la plancha" loading="lazy" width="720" height="1280"><figcaption data-i18n="d.gam">Gambas a la plancha</figcaption></figure>
+    </div>
+    <blockquote class="zone__q"><p>«Las mejores cigalas que he probado.»</p><cite>Ana Isabel Martín, Google</cite></blockquote>
+  </section>
+
+  <section class="sonar" id="sonar" data-depth="230">
+    <div class="sonar__head">
+      <h2 class="h2" data-i18n="s.t">Sonar</h2>
+      <p class="lead" data-i18n="s.l">Toca en el fondo para lanzar un ping y descubre lo que hay en nuestra vitrina.</p>
+    </div>
+    <div class="sonar__field" id="field" role="application" aria-label="Sonar: toca para descubrir especies">
+      <div class="sonar__grid" aria-hidden="true"></div>
+      <p class="sonar__hint" data-i18n="s.h">Toca aquí</p>
+    </div>
+    <ul class="sonar__found" id="found" aria-live="polite"></ul>
+  </section>
+
+  <section class="rice" id="arroces" data-depth="90">
+    <div class="rice__head">
+      <h2 class="h2" data-i18n="r.t">De vuelta a la superficie: los arroces</h2>
+      <p class="lead" data-i18n="r.l">Paella de marisco, arroz caldoso, paella con bogavante. Para compartir en el centro de la mesa.</p>
+    </div>
+    <div class="rice__row">
+      <figure><img src="assets/img/paella-bogavante.jpg" alt="Paella con bogavante y limón" loading="lazy" width="1284" height="723"><figcaption data-i18n="d.bog">Paella con bogavante</figcaption></figure>
+      <figure><img src="assets/img/arroz-caldoso.jpg" alt="Arroz caldoso con cangrejos" loading="lazy" width="720" height="900"><figcaption data-i18n="d.cal">Arroz caldoso</figcaption></figure>
+      <figure><img src="assets/img/paella.jpg" alt="Paella de marisco recién servida" loading="lazy" width="720" height="1280"><figcaption data-i18n="d.pae">Paella de marisco</figcaption></figure>
+    </div>
+    <blockquote class="rice__q"><p data-i18n="r.q">«Una paellita súper, nada que envidiar a una valenciana, y su marisco insuperable.»</p><cite>Joaquin Bosch, Google</cite></blockquote>
+  </section>
+
+  <section class="facts" data-depth="40">
+    <div class="fact">
+      <i class="ph ph-grains-slash"></i>
+      <h3 data-i18n="f1.t">Sin gluten</h3>
+      <p data-i18n="f1.p">«Todo adaptado sin gluten, muy a tener en cuenta.» Pregunta en sala.</p>
+    </div>
+    <div class="fact">
+      <i class="ph ph-medal"></i>
+      <h3 data-i18n="f2.t">Visitas de honor</h3>
+      <p data-i18n="f2.p">Por esta mesa han pasado ministros, embajadores y un expresidente de Colombia.</p>
+    </div>
+    <div class="fact">
+      <i class="ph ph-fish-simple"></i>
+      <h3 data-i18n="f3.t">La vitrina</h3>
+      <p data-i18n="f3.p">El producto fresco se ve nada más entrar, sobre hielo.</p>
+    </div>
+  </section>
+
+  <section class="reviews" data-depth="20">
+    <div class="reviews__head">
+      <h2 class="h2" data-i18n="rev.t">Lo dicen en español</h2>
+      <p class="reviews__score"><b>425</b> <span data-i18n="rev.s">opiniones en Google</span></p>
+    </div>
+    <div class="reviews__cols" id="reviews"></div>
+  </section>
+
+  <section class="visit" id="visita" data-depth="0">
+    <figure class="visit__fig"><img src="assets/img/facade.jpg" alt="Fachada de Casa Juanito de noche, con su rótulo azul" loading="lazy" width="1200" height="1600"></figure>
+    <div class="visit__txt">
+      <h2 class="h2" data-i18n="v.t">Al final de la playa de Nador</h2>
+      <p data-i18n="v.p">Un poco retirado del centro, en Hay Al Matar. Un taxi y listo.</p>
+      <dl>
+        <div><dt data-i18n="v.h">Horario</dt><dd data-i18n="v.h.v">Todos los días, de 12:00 a 00:00</dd></div>
+        <div><dt data-i18n="v.r">Reservas</dt><dd><a href="tel:+212536380500">05 36 38 05 00</a></dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/casa_juanito_nador/" target="_blank" rel="noopener">@casa_juanito_nador</a></dd></div>
+      </dl>
+      <div class="visit__cta">
+        <a class="btn btn--coral" href="tel:+212536380500" data-i18n="cta.call">Llamar</a>
+        <a class="btn btn--line" href="https://www.google.com/maps/search/?api=1&query=Restaurante+Casa+Juanito+Nador" target="_blank" rel="noopener" data-i18n="cta.route">Cómo llegar</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot"><p>Casa Juanito Nador · <span data-i18n="foot">Pescados y mariscos</span></p></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
